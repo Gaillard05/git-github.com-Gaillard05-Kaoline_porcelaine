@@ -1,0 +1,29 @@
+footer {
+    background-color: #79a9a5;
+    margin-top: 100px
+}
+
+.footer img {
+    width: 80px;
+    height: 80px;
+
+}
+
+h3,
+h2 {
+    font-family: 'Great Vibes', cursive;
+}
+
+li {
+    list-style-type: none;
+
+}
+
+footer p {
+    text-align: center;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+

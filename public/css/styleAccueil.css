@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    max-width: 960px;
+}
+
+.row{
+    margin: 0!important;
+}
+
+img {
+    border-radius: 10%;
+    width: 100%;
+}
+
+.img-fluid {
+    height: 40%;
+    width: 90%;
+}
+
+.row.carousel-inner{
+    margin: 0;
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+#carouselExampleIndicators {
+    width: 100%;
+    margin-top: 10%;
+    margin: 0 auto;
+}
+
+.carousel-indicators {
+    border-radius: 5%;
+}
+
+.photo_produits {
+    position: relative;
+}
+
+
+h2,
+h5 {
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: 'Great Vibes', cursive;
+}
+.btn_info,
+.btn_partagez {
+    text-decoration: none;
+    color: #FFFF;
+    background-color: #7995A9;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.btn_partagez {
+    padding: 1%;
+}
+
+.btn_info:hover,
+.btn_partagez:hover {
+    color: #F1F1F1;
+    background-color: #577386;
+    opacity: 0.8;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.legende {
+    position: relative;
+    width: 20%;
+}
+
+.figure {
+    position: relative;
+}
+
+.fig {
+    position: absolute;
+    bottom: 0;
+    width: 92.5%;
+    text-align: center;
+}
+
+.titre_slide {
+    position: absolute;
+    top: 10vh;
+    left: 40vw;
+    right: 0;
+    width: 100%;
+    font-size: 45px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #FFFF;
+}
+
+.photo_dej {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contain-btn-scroll{
+    position: relative;
+}
+
+.bi-arrow-up-circle{
+    position: absolute;
+    top: 0;
+    right: 1em;
+    color: #000000;
+}
+
+.bi-arrow-up-circle:hover{
+    color: grey;
+}
+
+
+@media screen and (max-width:560px) {
+    h5 {
+        font-size: 25px;
+        width: 100%;
+        color: #F1F1F1;
+        top: 5vh;
+        left: 35vw;
+    }
+
+    .btn_partagez {
+        padding: 3%;
+    }
+
+    .photo_atelier,
+    .photo_produits {
+        width: 100%;
+    }
+
+    .carousel-inner {
+        width: 100%;
+    }
+    .bi-arrow-up-circle{
+        right: 1em;
+    }
+
+}
+
+@media screen and (max-width:900px) and (min-width:560px) {
+    h5 {
+        font-size: 25px;
+        width: 100%;
+        color: #F1F1F1;
+    }
+
+    .btn_partagez {
+        padding: 3%;
+    }
+
+    .photo_atelier,
+    .photo_produits {
+        width: 100%;
+    }
+
+    .carousel-inner {
+        width: 100%;
+    }
+    .bi-arrow-up-circle{
+        right: 1.5em;
+    }
+}

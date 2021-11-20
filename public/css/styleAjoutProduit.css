@@ -1,0 +1,21 @@
+h2{
+    margin-top: 10px;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+}
+.ajouter{
+    background-color: #577386;
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
+    width: 40%;
+    color:#ffff;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+label{
+    font-family: 'lato';
+    margin: 1% 0 1% 0;
+}

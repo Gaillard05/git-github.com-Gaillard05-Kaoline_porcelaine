@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+	<div class="row g-0 mx-auto">
+		<h2>{{title}}</h2>
+		<img src="img/assiette_floral_2.jpg" alt="">
+		<h3>Mes services</h3>
+		<div class="col-xs text-xs-center col-md-12 text-md-center col-lg-12 ">
+			<p class="mt-5">
+				Toutes mes pièces sont entièrement décorées à la main. J'utilise des pigments sans plomb, apte pour l'alimentaire.Je vous propose mes services en toute occasion : Mariage, Naissance, Anniversaire, Cadeaux d'entreprise, Art de la table.N'hésitez pas à me contacter pour toute demande spécifique.
+			</p>
+			<button class="boutton_contact">Contactez Moi</button>
+		</div>
+
+		<article id="main" class="row mx-auto">
+			<h2>Mes produits</h2>
+			{% for photo in photos %}
+				<div class="col-4">
+					<h3>{{photo.products.title}}</h3>
+					<img id="produits" src="upload/{{photo.name}}" alt="produits">
+					<a href="#">Ajouter au panier</a>
+				</div>
+			{% endfor %}
+		</article>
+
+		<div class="row mx-auto">
+			<h2 class="mt-5">Comment me soutenir ?</h2>
+			<div class="w-xs-100 col-lg-12 w-lg-50 mx-auto">
+				<p class="mt-5 text-center">Ce contenu vous interresse ? Partagez le via le bouton de partage.</p>
+			</div>
+			<div class="col-lg-12 text-center mt-5 mb-5">
+				<a class="btn_partagez" href="#" role="button">Partagez</a>
+			</div>
+		</div>
+		<div class="row contain-btn-scroll">
+			<div class="col-lg-12">
+				<a class="bi-arrow-up-circle fs-1" href="#" role="button"></a>
+			</div>
+		</div>
+	{% endblock main %}

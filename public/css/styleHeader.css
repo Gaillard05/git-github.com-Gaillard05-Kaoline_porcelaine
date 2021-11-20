@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.logo img {
+     width: 100px;
+     height: 100px;
+ }
+
+ header {
+     background-color: #79a9a5;
+     width: 100%;
+ }
+
+ .bi-cart4{
+     color: #000000;
+ }
+ .bi-cart4:hover{
+    color:beige;
+}
+.bi-person-circle{
+    color: #000000;
+}
+.bi-person-circle:hover{
+    color:beige;
+}
+
+ .panier {
+     position: relative;
+ }
+
+ .nb-panier {
+     position: absolute;
+     top: 0;
+     left: 35px;
+     width: 24px;
+     height: 24px;
+     border-radius: 20px;
+     text-align: center;
+     background-color: beige;
+ }
+
+.bi-list, .bi-x-lg{
+    color: #000000;
+}
+
+.bi-list:hover{
+    color: beige;
+}
+
+.bi-x-lg:hover{
+    color: beige;
+}
+
+.cache{
+    display: none;
+}
+
+p, a{
+    font-family: 'Lato', sans-serif;
+} 
+
+ li a {
+     text-decoration: none;
+     color: black;
+ }
+ 
+ li a:hover{
+    color:beige;
+ }
+
+ h1 {
+     font-family: 'Great Vibes', cursive;
+ }
+
+ @media screen and (max-width: 576px) {
+     h1 {
+         font-size: 1em;
+     }
+
+     .logo img {
+         width: 50px;
+         height: 50px;
+     }
+     .compte{
+         width: 20px;
+         height: 20px;
+     }
+     .nb-panier {
+        left: 65px;
+    }
+ }
+
+ @media screen and (max-width: 768px) {
+     h1 {
+         font-size: 1em;
+     }
+
+     .logo img {
+         width: 60px;
+         height: 60px;
+     }
+
+     .compte{
+         width: 20px;
+         height: 20px;
+     }
+     .nb-panier {
+        left: 65px;
+    }
+     
+ }
