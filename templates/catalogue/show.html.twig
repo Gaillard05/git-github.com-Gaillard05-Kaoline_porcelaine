@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}{% endblock %}
+{% block main  %}
+	<article>
+		<h3>{{photos.products.title}}</h3>
+		<div class="description">
+			<p>{{photos.products.description}}</p>
+		</div>
+		<div class="prix">
+			<p>{{photos.products.prices}}
+				€</p>
+		</div>
+		<a href="#">Ajouter au panier</a>
+		<a href="{{ path('catalogue') }}">Retour au catalogue</a>
+	</article>
+
+
+{% endblock %}

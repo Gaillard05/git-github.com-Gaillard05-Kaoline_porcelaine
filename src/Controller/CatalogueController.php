@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Pictures;
+// use App\Entity\Products;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\PersistentCollection;
@@ -23,6 +24,17 @@ class CatalogueController extends AbstractController
         return $this->render('catalogue/catalogue.html.twig', [
             'controller_name' => 'CatalogueController',
             'title' => 'Catalogue',
+            'photos' => $photos
+        ]);
+    }
+    /**
+     * @Route("/catalogue/{id}", name="catalogue_show")
+     */
+
+    public function show(Pictures $photos): Response
+    {
+        $photos = $this->getDoctrine()->getRepository(Pictures::class)->find(['id' => $photos->getId()]);
+        return $this->render('catalogue/show.html.twig', [
             'photos' => $photos
         ]);
     }

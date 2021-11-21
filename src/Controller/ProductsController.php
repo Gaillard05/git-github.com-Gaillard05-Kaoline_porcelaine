@@ -4,11 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Pictures;
 use App\Entity\Products;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
+use App\Form\ProductsType;
+use App\Repository\ProductsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,92 +15,61 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/products", name="product_add")
+     * @Route("/products/new", name="products_create")
+     * @Route("/products/{id}/edit", name="products_edit")
      * @param Request $request
      * @return Response
      * 
      */
-    public function create(Request $request, EntityManagerInterface $entityManager): Response
+    public function form(Products $product = null, Request $request, EntityManagerInterface $entityManager): Response
     {
-        $product = new Products();
-        $form = $this->createFormBuilder($product)
-            ->add('title', TextType::class, [
-                'attr' => [
-                    'placeholder' => 'nom du produit',
-                    'class' => 'form-control'
-                ],
-                'label' => 'Nom du produit'
-            ])
-            ->add('description', TextareaType::class, [
-                'attr' => [
-                    'placeholder' => 'description du produit',
-                    'class' => 'form-control'
-                ],
-                'label' => 'Description du produit'
-            ])
-            ->add('categories', TextType::class, [
-                "attr" => [
-                    'placeholder' => 'catégorie du produit',
-                    'class' => 'form-control'
-                ],
-                'label' => 'Catégorie des produits'
-            ])
-            ->add('prices', NumberType::class, [
-                'attr' => [
-                    'placeholder' => 'prix du produit',
-                    'class' => 'form-control'
-                ],
-                'label' => 'Prix des produits'
-            ])
-            ->add('pictures', FileType::class, [
-                'attr' => [
-                    'placeholder' => 'images du produit',
-                    'class' => 'form-control'
-                ],
-                'label' => 'Images du produit',
-                'multiple' => true,
-                'mapped' => false,
-                'required' => false
-            ])
-            ->add('ajouter', SubmitType::class, [
-                'attr' => [
-                    'class' => 'ajouter'
-                ]
-            ])
-            ->getForm();
+        if (!$product) {
+            $product = new Products();
+        }
+
+        $form = $this->createForm(ProductsType::class, $product);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            //On récupère les images transmises
-            $images = $form->get('pictures')->getData();
 
-            //On parcourt le tableau d'images  
-            foreach ($images as $image) {
-                //généré un nouveau nom de fichier
-                $file = md5(uniqid()) . '.' . $image->guessExtension();
+            if (!$product->getId()) {
+                //On récupère les images transmises
+                $images = $form->get('pictures')->getData();
 
-                //On copie le fichier dans un dossier upload
-                $image->move(
-                    $this->getParameter('upload_directory'),
-                    $file
-                );
+                //On parcourt le tableau d'images  
+                foreach ($images as $image) {
+                    //généré un nouveau nom de fichier
+                    $file = md5(uniqid()) . '.' . $image->guessExtension();
 
-                //on stocke l'image dans la base (son nom)
-                $img = new Pictures();
-                $img->setName($file);
-                $product->addPicture($img);
+                    //On copie le fichier dans un dossier upload
+                    $image->move(
+                        $this->getParameter('upload_directory'),
+                        $file
+                    );
+
+                    //on stocke l'image dans la base (son nom)
+                    $img = new Pictures();
+                    $img->setName($file);
+                    $product->addPicture($img);
+                }
+
+                $entityManager->persist($product);
+                $entityManager->flush();
+
+                return $this->redirectToRoute('catalogue');
             }
-            $entityManager = $this->getDoctrine()->getManager();
+
             $entityManager->persist($product);
             $entityManager->flush();
 
-            return $this->redirectToRoute('catalogue');
+            return $this->redirectToRoute('catalogue_show', ['id' => $product->getId()]);
         }
 
-        return $this->render('products/product_add.html.twig', [
+        return $this->render('products/create.html.twig', [
             'controller_name' => 'ProductsController',
             'title' => 'Ajouter un produit :',
             'form' => $form->createView(),
+            'editMode' => $product->getId() !== null
         ]);
     }
 }
