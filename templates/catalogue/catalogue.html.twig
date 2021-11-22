@@ -19,7 +19,7 @@
 				<div class="col-4">
 					<h3>{{photo.products.title}}</h3>
 					<img id="produits" src="upload/{{photo.name}}" alt="produits">
-					<a href="{{ path('catalogue_show', {'id': photo.id}) }}" class="btn btn-primary">En savoir plus</a>
+					<a href="{{ path('catalogue_show', {'id': photo.id}) }}">En savoir plus</a>
 					<a href="#">Ajouter au panier</a>
 				</div>
 			{% endfor %}
