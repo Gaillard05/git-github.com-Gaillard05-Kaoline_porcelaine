@@ -20,7 +20,6 @@ class CatalogueController extends AbstractController
         //on récupère les images
         $photos = $this->getDoctrine()->getRepository(Pictures::class)->findAll();
 
-
         return $this->render('catalogue/catalogue.html.twig', [
             'controller_name' => 'CatalogueController',
             'title' => 'Catalogue',
