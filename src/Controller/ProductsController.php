@@ -72,4 +72,7 @@ class ProductsController extends AbstractController
             'editMode' => $product->getId() !== null
         ]);
     }
+    public function drop(Products $products)
+    {
+    }
 }
