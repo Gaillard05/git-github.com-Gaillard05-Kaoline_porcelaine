@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Pictures;
 use App\Entity\Products;
@@ -17,6 +17,7 @@ class ProductsController extends AbstractController
     /**
      * @Route("/products/new", name="products_create")
      * @Route("/products/{id}/edit", name="products_edit")
+     * @package App\Controller\Admin
      * @param Request $request
      * @return Response
      * 
