@@ -12,12 +12,11 @@
 
 img {
     border-radius: 10%;
-    width: 100%;
+    width: 90%;
 }
 
 .img-fluid {
-    height: 40%;
-    width: 90%;
+    width: 100%;
 }
 
 .row.carousel-inner{

@@ -1,11 +1,10 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}{% endblock %}
 {% block main  %}
 	<article>
 		<h3>{{photos.products.title}}</h3>
-		{# <div class="image">
-					<img id="produits" src="upload/{{photos.name}}" alt="">
-				</div> #}
+		<div class="image">
+			<img src="upload/{{photos.name}}">
+		</div>
 		<div class="description">
 			<p>{{photos.products.description}}</p>
 		</div>
