@@ -1,0 +1,110 @@
+body {
+    background: #E5DFD3;   
+ }
+
+ h3{
+    
+   font-family: 'Great Vibes', cursive;
+   font-weight: bold 10px;
+   
+ }
+        
+#f {
+ 
+ padding-top: 60px;
+ padding-bottom: 30px;
+ background:#E5DFD3 ;
+
+ 
+} 
+
+ #f img {
+    width: 100%;
+    border-radius: 50px;
+    border: solid 2px #000;
+    position: relative;  
+   
+     /* box-shadow: 1px 10px 30px 10px #B99A7B; */
+   
+ }  
+
+            
+#f h3 {
+ color: rgb(8, 8, 8);
+ font-weight: 900;
+ font-size: 30px;
+ /* font-weight: 600; */
+ /* margin-top: 40px; */
+
+
+}
+   
+#f p {
+ font-size: 20px; 
+ /* color: #f2f2f2; */
+ color: black;
+ /* text-align: center; */
+  padding-top: 100px; 
+  padding-left: 30px;
+  line-height: 32px;
+   margin: 0 50px;
+   /* background: #B99A7B; */
+   border-radius: 10px;
+   /* border: solid 2px #000; */
+ 
+          
+            
+}
+
+
+   
+#f1 img {
+  
+   /* width: 250px; */
+   max-width: 100%;
+   border-radius: 5%; 
+   border: solid 2px #000;
+    position: relative; 
+    
+  
+ 
+ }
+
+
+#f1 h3{
+  
+    /* border-radius: 30%;  */
+    /* line-height: 1; */
+    top: 10px;
+   margin-top: 10px;
+    color: black;
+
+    /* text-transform: uppercase; */
+
+/* padding: 10px; */
+      /* display: inline-block; */
+    /* font-size: 14px; */
+
+    /* padding: 40px 4px; */
+    /* position: relative; */
+    /* top: -15px; */
+}
+
+
+
+#f1 p{
+  line-height: 32px;
+  margin: 0 40px;
+ 
+}
+ figcaption{
+   
+  font-family: 'Great Vibes', cursive;
+  
+ 
+   /* background-color: rgb(0, 139, 30); */
+    /* background: #000; */
+    
+
+} 
+ 

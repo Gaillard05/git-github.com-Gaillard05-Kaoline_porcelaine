@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+}
+
+/* @import url('https://fonts.googleapis.com/css2? family= Lato & display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family= Great+Vibes & affichage=échange'); */
+
+@font-face {
+    font-family: "greatVibes";
+    src: url(./Fonts/OFL.txt);
+}
+
+.Adresse,
+.formulaire {
+    /* border: 1px solid black; */
+    box-shadow: 0 0 5px 5px gray;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.formulaire {
+    padding: 0px;
+}
+
+.Adresse {
+    padding: 0px
+}
+
+.Adresse img {
+    width: 30px;
+    height: 30px;
+}

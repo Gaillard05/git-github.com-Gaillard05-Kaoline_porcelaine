@@ -9,6 +9,7 @@
 		{# Run `composer require symfony/webpack-encore-bundle`#}
 		<link rel="stylesheet" href="{{asset('css/styleHeader.css')}}">
 		<link rel="stylesheet" href="{{asset('css/styleAccueil.css')}}">
+		<link rel="stylesheet" href="{{asset('css/styles.Apropos_final.css')}}">
 		<link rel="stylesheet" href="{{asset('css/styleCatalogue.css')}}">
 		<link rel="stylesheet" href="{{asset('css/styleCreateProduit.css')}}">
 		<link rel="stylesheet" href="{{asset('css/styleFooter.css')}}">
@@ -46,7 +47,7 @@
 									<a href="#" class="bi-cart4 fs-1 p-1" role="button"></a>
 									<p class="nb-panier">0</p>
 									<div class="compte d-flex">
-										<a href="#" class="ms-2 mb-2 bi-person-circle fs-1" role="button"></a>
+										<a href="{{ path('app_register') }}" class="ms-2 mb-2 bi-person-circle fs-1" role="button"></a>
 										<p class="connexion d-none d-lg-block m-1">Connexion</p>
 									</div>
 								</div>
@@ -66,13 +67,13 @@
 							<div class="row">
 								<ul class="menu col-6 text-center d-lg-flex justify-content-around mx-auto cache" id="navbar">
 									<li>
-										<a href="#">A propos</a>
+										<a href="{{ path('apropos') }}">A propos</a>
 									</li>
 									<li>
 										<a href="{{ path('catalogue') }}">Catalogue</a>
 									</li>
 									<li>
-										<a href="#">Contacts</a>
+										<a href="{{ path('contact') }}">Contacts</a>
 									</li>
 								</ul>
 							</div>
@@ -98,7 +99,7 @@
 							<h3>Information</h3>
 							<ul class="text-center">
 								<li>
-									<a href="#">Conseil d'entretien</a>
+									<a href="{{path('apropos')}}#Conseils">Conseil d'entretien</a>
 								</li>
 								<li>
 									<a href="#">Mention légales</a>
@@ -110,12 +111,7 @@
 						</div>
 						<div class="Réalisation col-lg-3 mt-2">
 							<h3>Mes réalisation</h3>
-							<ul>
-								<li><a href="#">Cadeaux</a></li>
-								<li><a href="#">Mariage</a></li>
-								<li><a href="#">Art de la table</a></li>
-								<li><a href="#">Thème personnaliser</a></li>
-							</ul>
+							<a href="{{path('catalogue')}}">Catalogue</a>
 						</div>
 						<div class="Réalisation col-lg-3 mt-2">
 							<h3>Vous pouvez me suivre</h3>

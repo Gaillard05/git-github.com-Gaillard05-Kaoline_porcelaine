@@ -1,0 +1,71 @@
+.bg{ 
+      
+ /* background: url('../../../Images/assiette_floral.jpg') no-repeat;   */
+
+width: 100%;
+height: 100vh;
+background-size: 200%;
+ /* border-radius: 10%;  */
+ 
+ padding-right: 10px;
+ /* margin: 0 auto; */
+ 
+ }  
+
+ .form-container{
+    position: relative;   
+    /* position: absolute; */
+     background: #fff; 
+    padding: 10px ; 
+    border-radius: 10px;
+    box-shadow: 1px 10px 30px 10px #79a9a5;   
+    border: 1px solid rgb(12, 11, 11);
+    /* margin: 20px 10px 200px 5px; */
+    margin-top: 50px;
+  
+   
+}  
+
+h2{
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold 5px;
+    
+}
+
+form .btn-primary{
+    background-color:#79a9a5;
+    color: black;
+    border: 1px solid rgb(27, 26, 26);
+    
+} 
+
+form .btn-primary:hover{
+    background-color:#7995a9;
+    color: black;
+    
+    
+} 
+.btn-primary:hover{
+    background-color: #79a9a5;
+   
+    
+} 
+label {
+    line-height: 2em;
+}  
+
+ /* p{
+    line-height: 2.5em;
+}   */
+
+
+   
+
+  
+@media only screen and (max-widht: 678px){
+    .bg{
+        background-size: 300%;
+    }
+    
+} 
+ 

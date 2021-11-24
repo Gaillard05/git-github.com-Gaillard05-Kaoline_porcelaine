@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block main %}
+	<div class="text w-75  mx-auto my-5">
+		<p class="text-center col-lg-6 col-md-10 col-sm-10 mx-auto ">Pour toutes questions ou demandes n'hésitez pas à me contacter via le formulaire de contact. Je vous répondrai dans les meilleurs délais.</p>
+		<p></p>
+	</div>
+	<div class="Contact container">
+		<div class="row  mx-auto justify-content-around">
+			<div class="Adresse col-lg-5 mt-5 col-ms-12 col-md-5 ps-5 text-center">
+				<h2 class="py-4">Coordonnées</h2>
+				<div class="d-flex d-inline justify-content-center">
+					<div class="locale text-center">
+						<i class="bi bi-geo-alt-fill"></i>
+						<p>
+
+							Séverine
+							<br>15 bis rue de la messe
+							<br>91490 Dannemois</p>
+						<i class="bi bi-telephone-fill"></i>
+						<p>06 72 06 26 29</p>
+						<i class="bi bi-envelope-fill"></i>
+						<p>
+							Serviceclientkaolineporcelaine@gmail.com</p>
+					</div>
+				</div>
+				<div class="locale text-center ">
+					<h2 class="py-5 text-center">Horaires d'ouverture</h2>
+					<p>
+						Du Lundi au Vendredi</p>
+					<p>9h-12h30 et 13h30-18h</p>
+
+				</div>
+			</div>
+			<form class="formulaire col-lg-5  mt-5 col-xs-12 col-md-5 d-flex d-inline" method="post" action="pdo.php">
+				<div class="icon d-flex flex-column py-4 mx-auto">
+					<label for="text">Votre Nom</label>
+					<input type="text" name="Nom">
+					<label for="text">Votre Prenom</label>
+					<input type="text" name="Prenom">
+					<label for="text">Votre Email</label>
+					<input type="text" name="Email">
+					<label for="text">Numero telephone</label>
+					<input type="number" name="Telephone">
+					<label for="text">Votre Message</label>
+					<textarea name="Message" cols="5" rows="10"></textarea>
+					<input type="submit" value="Envoyer">
+				</div>
+			</form>
+
+		</div>
+	</div>
+	<div class="map container w-75 mx-auto mt-5">
+		<div class=" row mx-auto">
+			<iframe class="col-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36628.641310928004!2d2.4938018408814893!3d48.476908453006075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5ebd66b803141%3A0x2b2063b6f47f5d8f!2s15%20Rue%20de%20la%20Messe%2C%2091490%20Dannemois!5e0!3m2!1sfr!2sfr!4v1635239278798!5m2!1sfr!2sfr" height="300" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	</div>
+	<div class="row contain-btn-scroll">
+		<div class="col-lg-12">
+			<a class="bi-arrow-up-circle fs-1" href="#" role="button"></a>
+		</div>
+	</div>
+{% endblock %}
