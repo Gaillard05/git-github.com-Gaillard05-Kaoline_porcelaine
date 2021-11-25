@@ -77,11 +77,7 @@ try {
 
     $sth->execute();
     //On renvoie l'utilisateur vers la page de remerciement
-    // header("Location: Contact.html.twig");
+    //header("Location: Contact.html.twig");
 } catch (PDOException $e) {
     echo 'Erreur : ' . $e->getMessage();
 }
-    // } 
-    // else {
-    //     header("Location:index2.php");
-//   }
