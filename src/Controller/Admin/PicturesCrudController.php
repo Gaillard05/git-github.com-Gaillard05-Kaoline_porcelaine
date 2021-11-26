@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Pictures;
+use App\Entity\Products;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class PicturesCrudController extends AbstractCrudController
