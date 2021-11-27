@@ -12,10 +12,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class Admin implements UserInterface, PasswordAuthenticatedUserInterface
 {
-    public function __toString(): string
-    {
-        return $this->username;
-    }
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -26,7 +22,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $kaoline;
+    private $username;
 
     /**
      * @ORM\Column(type="json")
@@ -44,16 +40,24 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->id;
     }
 
-    public function getKaoline(): ?string
+    /**
+     * @deprecated since Symfony 5.3, use getUserIdentifier instead
+     */
+    public function getUsername(): string
     {
-        return $this->kaoline;
+        return (string) $this->username;
     }
 
-    public function setKaoline(string $kaoline): self
+    public function setUsername(string $username): self
     {
-        $this->kaoline = $kaoline;
+        $this->username = $username;
 
         return $this;
+    }
+
+    public function __toString(): string
+    {
+        return $this->username;
     }
 
     /**
@@ -63,15 +67,7 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUserIdentifier(): string
     {
-        return (string) $this->kaoline;
-    }
-
-    /**
-     * @deprecated since Symfony 5.3, use getUserIdentifier instead
-     */
-    public function getUsername(): string
-    {
-        return (string) $this->kaoline;
+        return (string) $this->username;
     }
 
     /**

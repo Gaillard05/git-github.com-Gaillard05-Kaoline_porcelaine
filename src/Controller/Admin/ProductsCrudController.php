@@ -6,7 +6,6 @@ use App\Entity\Pictures;
 use App\Entity\Products;
 use App\Repository\ProductsRepository;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
@@ -21,8 +20,6 @@ class ProductsCrudController extends AbstractCrudController
         return Products::class;
         return Pictures::class;
     }
-
-
 
 
 

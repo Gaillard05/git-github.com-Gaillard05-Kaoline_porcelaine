@@ -1,20 +1,15 @@
 {% extends 'base.html.twig' %}
-{% block main  %}
+{% block main %}
 	<article>
-		<h3>{{photos.products.title}}</h3>
-		{# <div class="image">
-					<img src="upload/{{photos.name}}">
-				</div> #}
+		<h3>{{product.title}}</h3>
 		<div class="description">
-			<p>{{photos.products.description}}</p>
+			{{product.description | raw}}
 		</div>
 		<div class="prix">
-			<p>{{photos.products.prices}}
-				€</p>
+			{{product.prices}}
+			€
 		</div>
 		<a href="#">Ajouter au panier</a>
 		<a href="{{ path('catalogue') }}">Retour au catalogue</a>
 	</article>
-
-
 {% endblock %}
