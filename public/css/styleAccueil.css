@@ -93,7 +93,6 @@ p {
 .titre_slide {
     position: absolute;
     top: 10vh;
-    left: 40vw;
     right: 0;
     width: 100%;
     font-size: 45px;
