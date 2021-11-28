@@ -27,6 +27,7 @@ class ProductsCrudController extends AbstractCrudController
     {
         return [
             TextField::new('title'),
+            TextField::new('image'),
             TextField::new('categories'),
             TextareaField::new('description'),
             NumberField::new('prices')->hideOnIndex(),
