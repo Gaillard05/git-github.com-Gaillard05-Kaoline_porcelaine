@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 
@@ -28,7 +28,7 @@ class ProductsCrudController extends AbstractCrudController
         return [
             TextField::new('title'),
             TextField::new('categories'),
-            TextEditorField::new('description'),
+            TextareaField::new('description'),
             NumberField::new('prices')->hideOnIndex(),
         ];
     }
