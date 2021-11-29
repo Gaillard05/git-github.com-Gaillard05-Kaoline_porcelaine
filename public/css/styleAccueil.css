@@ -17,6 +17,7 @@ img {
 
 .img-fluid {
     width: 100%;
+    height: 40vh;
 }
 
 .row.carousel-inner{
@@ -120,6 +121,7 @@ p {
 .bi-arrow-up-circle:hover{
     color: grey;
 }
+
 
 
 @media screen and (max-width:560px) {

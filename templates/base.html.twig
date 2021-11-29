@@ -37,14 +37,14 @@
 						<div class="container">
 							<div class="row d-flex flex-column justify-content-center flex-md-row d-lg-flex">
 								<div class="logo col-4 mt-4 mx-auto">
-									<a href="{{ path('home') }}"><img src="{{asset('img/logo_kaoline.jpg')}}" alt="logoKoaline" class="w-50"></a>
+									<a href="{{ path('home') }}"><img src="{{asset('img/logo_kaoline.jpg')}}" alt="logoKoaline"></a>
 								</div>
 								<div class="col-4 mt-4 ps-lg-0 mx-auto">
 									<h1>Kaoline Porcelaine</h1>
 								</div>
 
 								<div class="panier col-4 mt-4 d-flex d-inline mx-auto">
-									<a href="#" class="bi-cart4 fs-1 p-1" role="button"></a>
+									<a href="{{ path('cart_index') }}" class="bi-cart4 fs-1 p-1" role="button"></a>
 									<p class="nb-panier">0</p>
 									<div class="compte d-flex">
 										<a href="{{ path('app_register') }}" class="ms-2 mb-2 bi-person-circle fs-1" role="button"></a>
@@ -92,8 +92,8 @@
 			<footer>
 				<div class="container">
 					<div class="row w-75 mx-auto text-center">
-						<figure class="footer col-lg-3 mt-5">
-							<a href="{{ path('home') }}"><img src="{{asset('img/logo_kaoline.jpg')}}" alt="Logo" class="w-50"></a>
+						<figure class="logo col-lg-3 mt-5">
+							<a href="{{ path('home') }}"><img src="{{asset('img/logo_kaoline.jpg')}}" alt="Logo"></a>
 						</figure>
 						<div class="info col-lg-3 mt-2">
 							<h3>Information</h3>
@@ -111,7 +111,7 @@
 						</div>
 						<div class="Réalisation col-lg-3 mt-2">
 							<h3>Mes réalisation</h3>
-							<a href="{{path('catalogue')}}">Catalogue</a>
+							<a class="text-decoration-none text-dark" href="{{path('catalogue')}}">Catalogue</a>
 						</div>
 						<div class="Réalisation col-lg-3 mt-2">
 							<h3>Vous pouvez me suivre</h3>
