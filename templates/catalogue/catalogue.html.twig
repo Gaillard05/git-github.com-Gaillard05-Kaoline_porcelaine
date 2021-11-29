@@ -15,11 +15,11 @@
 
 		<article id="main" class="row mx-auto">
 			<h2>Mes produits</h2>
-			{% for product in products %}
+			{% for photo in photos %}
 				<div class="col-4">
-					<h3>{{product.title}}</h3>
-					{# <img id="produits" src="upload/{{photo.name}}" alt="produits">#}
-					<a href="{{ path('catalogue_show', {'id': product.id}) }}">En savoir plus</a>
+					<h3>{{photo.products.title}}</h3>
+					<img id="produits" src="upload/{{photo.name}}" alt="produits">
+					<a href="{{ path('catalogue_show', {'id': photo.products.id}) }}">En savoir plus</a>
 					<a href="#">Ajouter au panier</a>
 				</div>
 			{% endfor %}

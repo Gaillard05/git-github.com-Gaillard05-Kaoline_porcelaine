@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Pictures;
 use App\Entity\Products;
-use App\Controller\ProductsType;
+use App\Form\ProductsType;
 use App\Repository\ProductsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,8 +15,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/products/new", name="products_create")
-     * @Route("/products/{id}/edit", name="products_edit")
+     * @Route("admin/products/new", name="products_create")
+     * @Route("admin/products/{id}/edit", name="products_edit")
      * @package App\Controller\Admin
      * @param Request $request
      * @return Response
@@ -67,7 +67,7 @@ class ProductsController extends AbstractController
             return $this->redirectToRoute('catalogue_show', ['id' => $product->getId()]);
         }
 
-        return $this->render('products/create.html.twig', [
+        return $this->render('admin/products/create.html.twig', [
             'controller_name' => 'ProductsController',
             'title' => 'Ajouter un produit :',
             'form' => $form->createView(),

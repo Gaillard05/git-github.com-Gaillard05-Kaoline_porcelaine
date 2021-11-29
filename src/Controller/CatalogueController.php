@@ -17,26 +17,26 @@ class CatalogueController extends AbstractController
     /**
      * @Route("/catalogue", name="catalogue")
      */
-    public function catalogue(Environment $twig, ProductsRepository $productsRepository): Response
+    public function catalogue(): Response
     {
-        // //on récupère les images
-        // $photos = $this->getDoctrine()->getRepository(Pictures::class)->findAll();
+        //on récupère les images
+        $photos = $this->getDoctrine()->getRepository(Pictures::class)->findAll();
 
-        return new Response($twig->render('catalogue/catalogue.html.twig', [
-            'products' => $productsRepository->findAll(),
+        return $this->render('catalogue/catalogue.html.twig', [
+            'controller_name' => 'CatalogueController',
             'title' => 'Catalogue',
-            // 'photos' => $photos
-        ]));
+            'photos' => $photos
+        ]);
     }
     /**
      * @Route("/catalogue/{id}", name="catalogue_show")
      */
 
-    public function show(Environment $twig, Products $products,  ProductsRepository $productsRepository): Response
+    public function show(Pictures $photos): Response
     {
-        return new Response($twig->render('catalogue/show.html.twig', [
-            'product' => $products
-
-        ]));
+        $photos = $this->getDoctrine()->getRepository(Pictures::class)->find(['id' => $photos->getId()]);
+        return $this->render('catalogue/show.html.twig', [
+            'photos' => $photos
+        ]);
     }
 }

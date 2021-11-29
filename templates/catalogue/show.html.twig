@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block main %}
 	<article>
-		<h3>{{product.title}}</h3>
+		<h3>{{photos.products.title}}</h3>
 		<div class="description">
-			{{product.description | raw}}
+			{{photos.products.description}}
 		</div>
 		<div class="prix">
-			{{product.prices}}
+			{{photos.products.prices}}
 			€
 		</div>
 		<a href="#">Ajouter au panier</a>
