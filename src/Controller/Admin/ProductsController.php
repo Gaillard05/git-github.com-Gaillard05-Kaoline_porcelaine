@@ -74,16 +74,4 @@ class ProductsController extends AbstractController
             'editMode' => $product->getId() !== null
         ]);
     }
-
-    public function drop(Products $products)
-    {
-        $images = $products->getPictures();
-        dd($images);
-        $em = $this->getDoctrine()->getManager();
-        $em->remove($products);
-        $em->flush();
-
-        $this->addFlash('message', 'produit supprimé avec succès');
-        return $this->redirectToRoute('catalogue');
-    }
 }
