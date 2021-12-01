@@ -37,14 +37,14 @@
 					<td colspan="3" class="text-right">Sous-Total</td>
 					<td>{{ total }}</td>
 					<td>
-						<a class="btn_info" href="#" role="button">Réserver</a>
+						<a class="btn_info" href="{{ path('contact') }}" role="button">Réserver</a>
 					</td>
 
 				</tr>
 			</tfoot>
 
 		</table>
-
+		<p>*Pour réserver vous serez rediriger vers le formulaire de contact, Je vous répondrai dans les meilleurs délais</p>
 	{% else %}
 		<p>c'est vide !</p>
 	{% endif %}
