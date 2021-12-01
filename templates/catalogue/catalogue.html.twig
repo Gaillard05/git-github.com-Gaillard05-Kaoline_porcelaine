@@ -19,7 +19,7 @@
 					<h3>{{photo.products.title}}</h3>
 					<img class="w-45 h-75" id="produits" src="upload/{{photo.name}}" alt="produits">
 					<a class="btn btn-success mt-2" href="{{ path('catalogue_show', {'id': photo.products.id}) }}" role="button">En savoir plus</a>
-					<a class="btn btn-primary mt-2" href="{{ path('cart_index') }}" role="button">Ajouter au panier</a>
+					<a class="btn btn-primary mt-2" href="{{ path('cart_add', {'id': photo.id}) }}" role="button">Ajouter au panier</a>
 				</div>
 			{% endfor %}
 		</article>

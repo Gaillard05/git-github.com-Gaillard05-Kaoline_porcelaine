@@ -12,7 +12,7 @@
 			{{photos.products.prices}}
 			€
 		</div>
-		<a href="{{ path('cart_index') }}">Ajouter au panier</a>
+		<a href="{{ path('cart_add', {'id': photo.id}) }}">Ajouter au panier</a>
 		<a href="{{ path('catalogue') }}">Retour au catalogue</a>
 	</article>
 {% endblock %}
