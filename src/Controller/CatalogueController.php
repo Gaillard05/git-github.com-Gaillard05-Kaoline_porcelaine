@@ -34,6 +34,7 @@ class CatalogueController extends AbstractController
 
     public function show(Pictures $photos): Response
     {
+        //on interroge la base pour récupérer l'id des produits et photos 
         $photos = $this->getDoctrine()->getRepository(Pictures::class)->find(['id' => $photos->getId()]);
         return $this->render('catalogue/show.html.twig', [
             'photos' => $photos

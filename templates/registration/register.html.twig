@@ -5,16 +5,17 @@
 {% form_theme registrationForm 'bootstrap_5_layout.html.twig'%}
 
 {% block main %}
-	<h1>Créer un compte</h1>
-
-	{{ form_start(registrationForm) }}
-	{{ form_row(registrationForm.email) }}
-	{{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-	{{ form_row(registrationForm.agreeTerms) }}
-
-	<button type="submit" class="btn">S'inscrire</button>
-	<a href="{{ path('connexion') }}">Déjà inscrit se connecter</a>
-	{{ form_end(registrationForm) }}
+	<p class="fs-1 text-center">En cours de réalisation</p>
+	{# <h1>Créer un compte</h1>
+	
+		{{ form_start(registrationForm) }}
+		{{ form_row(registrationForm.email) }}
+		{{ form_row(registrationForm.plainPassword, {
+	            label: 'Password'
+	        }) }}
+		{{ form_row(registrationForm.agreeTerms) }}
+	
+		<button type="submit" class="btn">S'inscrire</button>
+		<a href="{{ path('connexion') }}">Déjà inscrit se connecter</a>
+		{{ form_end(registrationForm) }} #}
 {% endblock %}

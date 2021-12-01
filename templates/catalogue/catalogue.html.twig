@@ -13,13 +13,13 @@
 		</div>
 
 		<article id="main" class="row mx-auto">
-			<h2 class="mt-5 mb-5 font-weight-bold">Mes produits</h2>
+			<h2 class="mt-5 mb-5 fw-bold">Mes produits</h2>
 			{% for photo in photos %}
 				<div class="col-4">
 					<h3>{{photo.products.title}}</h3>
 					<img class="w-45 h-75" id="produits" src="upload/{{photo.name}}" alt="produits">
 					<a class="btn btn-success mt-2" href="{{ path('catalogue_show', {'id': photo.products.id}) }}" role="button">En savoir plus</a>
-					<a class="btn btn-primary mt-2" href="{{ path('cart_add', {'id': photo.id}) }}" role="button">Ajouter au panier</a>
+					{# <a class="btn btn-primary mt-2" href="{{ path('cart_add', {'id': photo.id}) }}" role="button">Ajouter au panier</a> #}
 				</div>
 			{% endfor %}
 		</article>

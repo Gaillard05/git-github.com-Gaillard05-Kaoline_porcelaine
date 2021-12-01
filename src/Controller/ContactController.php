@@ -42,6 +42,8 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             // dd($contact);
             // die();
+
+            // on envoie dans la base
             $EntityManager->persist($contact);
             $EntityManager->flush();
 
@@ -56,9 +58,10 @@ class ContactController extends AbstractController
                     'Email' => $contact->getEmail(),
                     'Message' => $contact->getMessage()
                 ]);
+            //on envoie un email
             $mailer->send($mail);
         }
-
+        //on redirige vers la vue 
         return $this->render('contact/contact.html.twig', [
             // 'controller_name' => 'ContactController',
             'formFormContact' => $form->createView()

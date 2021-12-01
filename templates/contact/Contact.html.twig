@@ -2,21 +2,26 @@
 
 {% form_theme formFormContact 'bootstrap_5_layout.html.twig' %}
 
+{% block stylesheets %}
+	<style>
+		.form {
+			width: 50%;
+		}
+	</style>
+{% endblock stylesheets %}
 
 {% block main %}
 	<div class="text w-75  mx-auto my-5">
 		<p class="text-center col-lg-6 col-md-10 col-sm-10 mx-auto ">Pour toutes questions ou demandes n'hésitez pas à me contacter via le formulaire de contact. Je vous répondrai dans les meilleurs délais.</p>
-		<p></p>
 	</div>
 	<div class="Contact container">
 		<div class="row  mx-auto justify-content-around">
 			<div class="Adresse col-lg-5 mt-5 col-ms-12 col-md-5 ps-5 text-center">
-				<h2 class="py-4">Coordonnées</h2>
+				<h2 class="py-3">Coordonnées</h2>
 				<div class="d-flex d-inline justify-content-center">
 					<div class="locale text-center">
 						<i class="bi bi-geo-alt-fill"></i>
 						<p>
-
 							Séverine
 							<br>15 bis rue de la messe
 							<br>91490 Dannemois</p>
@@ -29,7 +34,7 @@
 					</div>
 				</div>
 				<div class="locale text-center ">
-					<h2 class="py-5 text-center">Horaires d'ouverture</h2>
+					<h2 class="py-3 text-center">Horaires d'ouverture</h2>
 					<p>
 						Du Lundi au Vendredi</p>
 					<p>9h-12h30 et 13h30-18h</p>
@@ -37,12 +42,14 @@
 				</div>
 			</div>
 
-			{{ form_start(formFormContact) }}
-			{{ form_widget(formFormContact)}}
-			<button type="submit">
-				Envoyer
-			</button>
-			{{ form_end(formFormContact) }}
+			<div class="form mt-5">
+				{{ form_start(formFormContact) }}
+				{{ form_widget(formFormContact)}}
+				<button class="btn btn-success mt-2" type="submit">
+					Envoyer
+				</button>
+				{{ form_end(formFormContact) }}
+			</div>
 		</div>
 	</div>
 	<div class="map container w-75 mx-auto mt-5">
