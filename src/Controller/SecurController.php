@@ -23,9 +23,9 @@ class SecurController extends AbstractController
 
         return $this->render('connexion/connexion.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
 
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('cart_index');
-        // }
+        if ($this->getUser()) {
+            return $this->redirectToRoute('catalogue');
+        }
     }
 
     /**
