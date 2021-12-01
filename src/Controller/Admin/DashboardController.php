@@ -20,7 +20,7 @@ class DashboardController extends AbstractDashboardController
     {
         return $this->render('admin/dashboard.html.twig');
         $routeBuilder = $this->get(AdminUrlGenrator::class);
-        $url = $routeBuilder->setController(ProductsCrudController::class)->generateUrl();
+        $url = $routeBuilder->setController(ProductsController::class)->generateUrl();
 
         return $this->redirect($url);
     }
