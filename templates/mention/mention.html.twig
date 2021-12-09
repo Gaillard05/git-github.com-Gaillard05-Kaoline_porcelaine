@@ -1,70 +1,77 @@
 {% extends "base.html.twig" %}
 
-{% block stylesheets %}
-	<link rel="stylesheet" href="{{asset('css/styleHeader.css')}}">
-	<link rel="stylesheet" href="{{asset('css/styleAccueil.css')}}">
-	<link rel="stylesheet" href="{{asset('css/styleFooter.css')}}">
-{% endblock %}
-
 
 {% block main %}
-	<div></div>
-	<h2>Mentions légales</h2>
-	Le site ne peut être utilisé que sous réserve du respect des présentes conditions d’utilisation et mentions d’avertissement. En conséquence, l’utilisation du site en vaut acceptation. Protection des données personnelles (le cas échéant). La société KAOLINE PORCELAINE s’engage à préserver la confidentialité des informations éventuellement fournies en ligne par l’internaute.
-			
-			Dénomination sociale
-			Coordonnées
-			
-			Siège social : 
-			
-			Kaoline Porcelaine  15 bis rue de la messe 91490 Dannemois
-			
-			Tel :  06 72 06 26 29
-			
-			Courriel : client.kaolineporcelaine@gmail.com
-			
-			Responsable de publication
-			
-			Co-direction : Galisser Corinne et Monteiro Sabrina
-			
-			Propriétaire du nom de domaine asea-association.org : // A REMPLIR
-			
-			Éditeur de site / hébergement :   Symfony/ OVH
-			
-			Directeur de publication : // A REMPLIR
-			
-			Conception et réalisation : // A REMPLIR
-			
-			Propriété intellectuelle
-			
-			Le site ainsi que les données qui y figurent telles que marques logos, graphismes, photographies, textes rédactionnels sont protégés au titre de la propriété intellectuelle et sont la propriété exclusive d’ KAOLINE PORCELAINE . Le site et les informations qui y figurent sont destinés à l’usage strictement personnel de l’utilisateur et ne peuvent être reproduits, ni communiqués à des tiers, ni utilisés en tout ou partie, à quelque fin que ce soit, ni servir à la création d’œuvres dérivées. En conséquence,l’exploitation non autorisée de tout ou partie du site (reproduction, représentation, publication, etc.)constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle, est donc formellement interdite sauf autorisation expresse d’ KAOLINE PORCELAINE , engage la responsabilité de l’utilisateur et est susceptible d’entraîner des poursuites judiciaires.
-			
-			 
-			
-			Caractère des informations contenues dans le site
-			
-			Les informations présentes sur ce site Web n’ont qu’un caractère indicatif et ni leur contenu ni leur exactitude ne peuvent être garantis. Ces informations n’engagent pas contractuellement KAOLINE PORCELAINE .
-			
-			KAOLINE PORCELAINE  décline toute responsabilité sur les décisions qui pourraient être prises à partir de ces informations.
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h2>Mentions légales</h2>
+				<p>Le site ne peut être utilisé que sous réserve du respect des présentes conditions d’utilisation et mentions d’avertissement. En conséquence, l’utilisation du site en vaut acceptation. Protection des données personnelles (le cas échéant). La société KAOLINE PORCELAINE s’engage à préserver la confidentialité des informations éventuellement fournies en ligne par l’internaute.</p>
+			</div>
+			<div class="col-12 text-center">
+				<h3>Dénomination sociale</h3>
+				<h5>
+					Coordonnées	Siège social :
+				</h5>
+				<p>Kaoline Porcelaine
+					<br>
+					15 bis rue de la messe, 91490 Dannemois
+					<br>
+					Tel :  06 72 06 26 29
+					<br>
+					Courriel : client.kaolineporcelaine@gmail.com</p>
+			</div>
+			<div class="col-12 text-center">
+				<h3>Responsable de publication</h3>
 
-	<p>Le contenu du site est susceptible de modification sans préavis.
-	</p>
+				<p>Propriétaire du nom de domaine www.kaoline-porcelaine.com  : // A REMPLIR</p>
+
+				<p>Éditeur de site / hébergement :   Symfony/ OVH</p>
+
+				<p>Directeur de publication : // A REMPLIR</p>
+
+				<p>Conception et réalisation : // A REMPLIR</p>
+			</div>
+			<div class="col-12">
+				<h3>Propriété intellectuelle</h3>
+
+				<p>Le site ainsi que les données qui y figurent telles que marques logos, graphismes, photographies, textes rédactionnels sont protégés au titre de la propriété intellectuelle et sont la propriété exclusive de KAOLINE PORCELAINE . Le site et les informations qui y figurent sont destinés à l’usage strictement personnel de l’utilisateur et ne peuvent être reproduits, ni communiqués à des tiers, ni utilisés en tout ou partie, à quelque fin que ce soit, ni servir à la création d’œuvres dérivées. En conséquence,l’exploitation non autorisée de tout ou partie du site (reproduction, représentation, publication, etc.)constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle, est donc formellement interdite sauf autorisation expresse d’ KAOLINE PORCELAINE , engage la responsabilité de l’utilisateur et est susceptible d’entraîner des poursuites judiciaires.
+																																																																																																																																													
+																																																																																																																																													Caractère des informations contenues dans le site
+																																																																																																																																													
+																																																																																																																																													Les informations présentes sur ce site Web n’ont qu’un caractère indicatif et ni leur contenu ni leur exactitude ne peuvent être garantis. Ces informations n’engagent pas contractuellement KAOLINE PORCELAINE .
+																																																																																																																																													
+																																																																																																																																													KAOLINE PORCELAINE  décline toute responsabilité sur les décisions qui pourraient être prises à partir de ces informations.</p>
+
+				<p>Le contenu du site est susceptible de modification sans préavis.
+				</p>
 
 
-	<p>Dysfonctionnement et virus
-					
-					L’utilisateur est informé, conformément à l’article 27 de la loi Informatique, fichiers et libertés du 6 janvier 1978, que les informations facultatives qu’il communique en répondant s’il le souhaite aux formulaires présents sur le site permettent de répondre à sa demande, sont destinées à KAOLINE PORCELAINE , responsable du traitement, à des fins de gestion administrative et commerciale. L’utilisateur est informé qu’il dispose d’un droit d’accès et de rectification relativement à l’ensemble des données nominatives le concernant en écrivant à KAOLINE PORCELAINE . Notre numéro de déclaration à la CNIL est le n° // A REMPLIR.
-	</p>
+				<p>Dysfonctionnement et virus
+																																																																																																																																																	
+																																																																																																																																																	L’utilisateur est informé, conformément à l’article 27 de la loi Informatique, fichiers et libertés du 6 janvier 1978, que les informations facultatives qu’il communique en répondant s’il le souhaite aux formulaires présents sur le site permettent de répondre à sa demande, sont destinées à KAOLINE PORCELAINE , responsable du traitement, à des fins de gestion administrative et commerciale. L’utilisateur est informé qu’il dispose d’un droit d’accès et de rectification relativement à l’ensemble des données nominatives le concernant en écrivant à KAOLINE PORCELAINE . Notre numéro de déclaration à la CNIL est le n° // A REMPLIR.
+				</p>
 
-	<p>Liens hypertextes : responsabilité
-		<br>
-		Les liens hypertextes présents sur le site orientant les utilisateurs vers d’autres sites Internet n’engagent pas la responsabilité d’KAOLINE PORCELAINE quant au contenu de ces sites.
-					Toute personne physique ou morale souhaitant que soit établi un lien (adresse de son site) à partir de notre site, doit préalablement en demander l’autorisation.
-					L’établissement de lien vers notre site ne requiert pas d’autorisation.  KAOLINE PORCELAINE dégagent toute responsabilité dans ce cas.
-					Pour toute question relative à l’utilisation de ce site internet, adressez-vous par courriel à // A REMPLIR
-	</p>
+				<p>Liens hypertextes : responsabilité
+																																																																															Les liens hypertextes présents sur le site orientant les utilisateurs vers d’autres sites Internet n’engagent pas la responsabilité d’KAOLINE PORCELAINE quant au contenu de ces sites.
+																																																																																																																																																	Toute personne physique ou morale souhaitant que soit établi un lien (adresse de son site) à partir de notre site, doit préalablement en demander l’autorisation.
+																																																																																																																																																	L’établissement de lien vers notre site ne requiert pas d’autorisation.  KAOLINE PORCELAINE dégagent toute responsabilité dans ce cas.
+																																																																																																																																																	Pour toute question relative à l’utilisation de ce site internet, adressez-vous par courriel à // A REMPLIR
+				</p>
+			</div>
 
-	Droit à l’image
-	<p>
-		Notre site utilise des images libres de droit.</p>
-</div>{% endblock main %}
+			<div class="col-12 text-center">
+				<h3>
+					Droit à l’image
+				</h3>
+				<p>
+					Notre site utilise des images libres de droit.</p>
+			</div>
+		</div>
+		<div class="row contain-btn-scroll">
+			<div class="col-lg-12">
+				<a class="bi-arrow-up-circle fs-1" href="#" role="button"></a>
+			</div>
+		</div>
+	</div>
+{% endblock main %}
