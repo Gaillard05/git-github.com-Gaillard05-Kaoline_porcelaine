@@ -38,7 +38,7 @@
 						<div class="container">
 							<div class="row ms-5 mx-auto d-flex flex-column justify-content-center flex-md-row d-lg-flex">
 								<div class="logo col-4 mt-4 mx-auto">
-									<a href="{{ path('home') }}"><img src="{{asset('img/logoKaoline.png')}}" alt="logoKoaline"></a>
+									<a href="{{ path('home') }}"><img src="{{asset('img/logo_kaoline.png')}}" alt="logoKoaline"></a>
 								</div>
 								<div class="col-4 mt-4 ps-lg-0 mx-auto">
 									<h1>Kaoline Porcelaine</h1>
@@ -94,7 +94,7 @@
 				<div class="container">
 					<div class="row w-75 mx-auto text-center">
 						<figure class="logo col-lg-3 mt-5">
-							<a href="{{ path('home') }}"><img src="{{asset('img/logoKaoline.png')}}" alt="Logo"></a>
+							<a href="{{ path('home') }}"><img src="{{asset('img/logo_kaoline.png')}}" alt="Logo"></a>
 						</figure>
 						<div class="info col-lg-3 mt-2">
 							<h3>Information</h3>
@@ -105,13 +105,14 @@
 								<li>
 									<a href="{{ path("mention") }}">Mention légales</a>
 								</li>
-								<a href="#">Confidentialités</a>
 							</li>
 						</ul>
 					</div>
 					<div class="Réalisation col-lg-3 mt-2">
 						<h3>Mes réalisation</h3>
-						<a class="text-decoration-none text-dark" href="{{path('catalogue')}}">Catalogue</a>
+						<ul>
+							<li><a class="text-decoration-none text-dark"href="{{path('catalogue')}}">Catalogue</a></li>
+						</ul>
 					</div>
 					<div class="Réalisation col-lg-3 mt-2">
 						<h3>Vous pouvez me suivre</h3>

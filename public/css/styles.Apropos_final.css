@@ -1,8 +1,4 @@
-body {
-    background: #E5DFD3;   
- }
-
- h3{
+h3{
     
    font-family: 'Great Vibes', cursive;
    font-weight: bold 10px;
@@ -13,9 +9,6 @@ body {
  
  padding-top: 60px;
  padding-bottom: 30px;
- background:#E5DFD3 ;
-
- 
 } 
 
  #f img {

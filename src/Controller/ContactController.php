@@ -49,7 +49,7 @@ class ContactController extends AbstractController
 
             $mail = (new TemplatedEmail())
                 ->from($contact->getEmail())
-                ->to('maylhedge@gmail.com')
+                ->to('sv.client.kaolineporcelaine@gmail.com')
                 ->subject('Demande client')
                 ->htmlTemplate('emails/demande.html.twig')
                 ->context([

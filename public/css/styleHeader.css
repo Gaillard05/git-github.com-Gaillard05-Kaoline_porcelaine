@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 .logo img {
-     width: 100px;
-     height: 100px;
+     width: 150px;
+     height: 150px;
      border-radius: 50%;
  }
 
  header {
-     background-color: #e5dfd3;
+     background-color: #b7ebbb;
      width: 100%;
      margin: 0 auto;
  }
