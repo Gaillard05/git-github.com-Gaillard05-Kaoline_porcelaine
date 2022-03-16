@@ -1,24 +1,26 @@
 {% extends 'base.html.twig' %}
 {% block main %}
-	<article>
-		<h3>{{photos.products.title}}</h3>
-		<div class="d-flex w-75">
-			<div class="image">
-				<img src="/upload/{{photos.name}}" alt="">
-			</div>
-			<div class="pb-4 description ms-4">
-				{{photos.products.description}}
-				{{photos.products.prices}}
-				€
+	<main class="container">
+		<article>
+			<h3>{{photos.products.title}}</h3>
+			<div class="d-flex w-75">
+				<div class="image">
+					<img src="/upload/{{photos.name}}" alt="">
+				</div>
+				<div class="pb-4 description ms-4">
+					{{photos.products.description}}
+					{{photos.products.prices}}
+					€
 
-				{# <div class="prix"></div> #}
+					{# <div class="prix"></div> #}
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-3">
-				<a class="text-center btn btn-primary" role="button" href="{{ path('catalogue') }}">Retour au catalogue</a>
+			<div class="row">
+				<div class="col-3">
+					<a class="text-center btn btn-primary" role="button" href="{{ path('catalogue') }}">Retour au catalogue</a>
+				</div>
 			</div>
-		</div>
-		{# <a href="{{ path('cart_add', {'id': photo.id}) }}">Ajouter au panier</a> #}
-	</article>
+			{# <a href="{{ path('cart_add', {'id': photo.id}) }}">Ajouter au panier</a> #}
+		</article>
+	</main>
 {% endblock %}

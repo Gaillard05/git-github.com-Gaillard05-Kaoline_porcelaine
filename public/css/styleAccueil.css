@@ -12,7 +12,7 @@
 
 img {
     border-radius: 10%; 
-    width: 90%;
+    width: 50%;
 }
 
 .img-fluid {
@@ -34,11 +34,8 @@ img {
     margin: 0 auto;
 }
 
-/* .carousel-indicators {
-    border-radius: 5%;
-} */
-
 .photo_produits {
+    width: 80%;
     position: relative;
 }
 
@@ -70,8 +67,6 @@ h5 {
 
 p {
     font-family: "Lato", sans-serif;
-    width: 65%;
-    margin: 0 auto;
 }
 
 .legende {
@@ -87,7 +82,7 @@ p {
     position: absolute;
     bottom: 0;
     width: 92.5%;
-font-weight: bold;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -95,11 +90,13 @@ font-weight: bold;
     position: absolute;
     top: 10vh;
     right: 0;
+    left: 0;
     width: 100%;
     font-size: 45px;
     margin-bottom: 0;
     font-weight: bold;
     color: #FFFF;
+    z-index: 1;
 }
 
 .photo_dej {
@@ -125,12 +122,18 @@ font-weight: bold;
 
 
 @media screen and (max-width:560px) {
+    .titre_slide{
+        font-size: 35px;
+    }
     h5 {
         font-size: 25px;
         width: 100%;
         color: #F1F1F1;
         top: 5vh;
         left: 35vw;
+    }
+    .btn_info{
+        padding: 5%;
     }
 
     .btn_partagez {

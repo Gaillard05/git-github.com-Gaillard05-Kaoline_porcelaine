@@ -3,29 +3,32 @@
 {% form_theme form 'bootstrap_5_layout.html.twig' %}
 
 {% block main %}
-	<h2>
-		{% if editMode %}
-			Editer un produit
-		{% else %}
-			Ajouter un produit
-		{% endif %}
-	</h2>
-	{{ form_start(form) }}
+	<main class="container">
+		<h2>
+			{% if editMode %}
+				Editer un produit
+			{% else %}
+				Ajouter un produit
+			{% endif %}
+		</h2>
+		{{ form_start(form) }}
 
-	{{ form_row(form.title, {'attr':{'placeholder':'nom du produit'}}) }}
-	{{ form_row(form.pictures, {'attr':{'placeholder':'images du produit'}}) }}
-	{{ form_row(form.description, {'attr':{'placeholder':'description du produit'}}) }}
-	{{ form_row(form.categories, {'attr':{'placeholder':'catégorie du produit'}}) }}
-	{{ form_row(form.prices, {'attr':{'placeholder':'prix du produit'}}) }}
+		{{ form_row(form.title, {'attr':{'placeholder':'nom du produit'}}) }}
+		{{ form_row(form.pictures, {'attr':{'placeholder':'images du produit'}}) }}
+		{{ form_row(form.description, {'attr':{'placeholder':'description du produit'}}) }}
+		{{ form_row(form.categories, {'attr':{'placeholder':'catégorie du produit'}}) }}
+		{{ form_row(form.prices, {'attr':{'placeholder':'prix du produit'}}) }}
 
-	<button type="submit" class="ajouter">
-		{% if editMode %}
-			Enregistrer les modifications
-		{% else %}
-			Ajouter le produit
-		{% endif %}
-	</button>
+		<button type="submit" class="ajouter">
+			{% if editMode %}
+				Enregistrer les modifications
+			{% else %}
+				Ajouter le produit
+			{% endif %}
+		</button>
 
-	{{ form_end(form) }}
+		{{ form_end(form) }}
+
+	</main>
 
 {% endblock main %}

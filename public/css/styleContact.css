@@ -23,6 +23,10 @@
     padding: 0px;
 }
 
+.form{
+    width: 100%;
+}
+
 .Adresse {
     padding: 0px
 }
@@ -30,4 +34,13 @@
 .Adresse img {
     width: 30px;
     height: 30px;
+}
+.form{
+    width: 75%;
+}
+
+@media screen and (max-width:900px) and (min-width:560px) {
+   .form{
+    width: 75%;
+   }
 }
